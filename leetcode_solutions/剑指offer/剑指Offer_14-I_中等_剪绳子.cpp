@@ -11,14 +11,14 @@ class Solution {
 public:
     int cuttingRope(int n) {
         if (n == 2) return 1;
-        if (n < 5) return (n-2) * 2;
+        if (n < 5) return (n - 2) * 2;
 
         int ans = 1;
-        while (n > 3){
+        while (n > 3) {
             ans *= 3;
             n -= 3;
         }
-        if (n == 1) return ans/3*4;
-        return ans*n;
+        if (n == 1) return ans / 3 * 4;
+        return ans * n;
     }
 };

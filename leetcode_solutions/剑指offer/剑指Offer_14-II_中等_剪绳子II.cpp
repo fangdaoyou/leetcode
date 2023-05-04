@@ -11,15 +11,15 @@ class Solution {
 public:
     int cuttingRope(int n) {
         if (n == 2) return 1;
-        if (n < 5) return (n-2) * 2;
+        if (n < 5) return (n - 2) * 2;
 
-        int MOD = 1e9+7;
+        int MOD = 1e9 + 7;
 
         long long ans = 1;
-        while (n > 4){
+        while (n > 4) {
             ans = ans * 3 % MOD;
             n -= 3;
         }
-        return (int)(ans*n % MOD);
+        return (int) (ans * n % MOD);
     }
 };

@@ -10,6 +10,7 @@ using namespace std;
 class CQueue {
 public:
     stack<int> stk1, stk2;
+
     CQueue() {
 
     }
@@ -20,13 +21,13 @@ public:
 
     int deleteHead() {
         if (stk1.empty()) return -1;
-        while (!stk1.empty()){
+        while (!stk1.empty()) {
             stk2.push(stk1.top());
             stk1.pop();
         }
         int value = stk2.top();
         stk2.pop();
-        while (!stk2.empty()){
+        while (!stk2.empty()) {
             stk1.push(stk2.top());
             stk2.pop();
         }

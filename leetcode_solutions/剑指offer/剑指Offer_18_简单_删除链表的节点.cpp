@@ -11,16 +11,17 @@ using namespace std;
 struct ListNode {
     int val;
     ListNode *next;
+
     ListNode(int x) : val(x), next(NULL) {}
 };
 
 class Solution {
 public:
-    ListNode* deleteNode(ListNode* head, int val) {
+    ListNode *deleteNode(ListNode *head, int val) {
         ListNode *dummy = new ListNode(INT_MAX), *pre = dummy;
         dummy->next = head;
         while (head) {
-            if (head->val == val){
+            if (head->val == val) {
                 pre->next = head->next;
                 break;
             }

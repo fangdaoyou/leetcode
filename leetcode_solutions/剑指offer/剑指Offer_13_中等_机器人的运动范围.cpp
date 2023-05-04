@@ -9,16 +9,17 @@ using namespace std;
 
 class Solution {
     int get(int x) {
-        int res=0;
-        for (; x; x /= 10){
+        int res = 0;
+        for (; x; x /= 10) {
             res += x % 10;
         }
         return res;
     }
+
 public:
     int movingCount(int m, int n, int k) {
         if (!k) return 1;
-        vector<vector<bool> > vis(m, vector<bool>(n, false));
+        vector <vector<bool>> vis(m, vector<bool>(n, false));
         int ans = 1;
         vis[0][0] = true;
         for (int i = 0; i < m; ++i) {

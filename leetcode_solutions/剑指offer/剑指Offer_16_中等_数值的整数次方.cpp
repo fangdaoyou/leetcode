@@ -13,13 +13,13 @@ public:
         long long tn = n;
         double ans = 1.0;
         if (n < 0) {
-            x = 1/x;
+            x = 1 / x;
             tn = -tn;
         }
 
         double temp = x;
-        while (tn){
-            if (tn & 1){
+        while (tn) {
+            if (tn & 1) {
                 ans *= temp;
             }
             temp *= temp;
