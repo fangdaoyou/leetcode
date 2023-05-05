@@ -8,7 +8,7 @@
 using namespace std;
 class MinStack {
 public:
-    /** initialize your data structure here. */
+
     stack<int> stk1, stk2;
     MinStack() {
 
