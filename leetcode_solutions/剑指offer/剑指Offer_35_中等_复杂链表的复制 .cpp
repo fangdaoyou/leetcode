@@ -12,8 +12,8 @@ using namespace std;
 class Node {
 public:
     int val;
-    Node* next;
-    Node* random;
+    Node *next;
+    Node *random;
 
     Node(int _val) {
         val = _val;
@@ -24,12 +24,12 @@ public:
 
 class Solution {
 public:
-    Node* copyRandomList(Node* head) {
+    Node *copyRandomList(Node *head) {
         if (head == nullptr) return head;
-        Node* newHead = new Node(head->val), * cur = newHead, * oriHead = head;
-        unordered_map<Node*, Node*> map;
+        Node *newHead = new Node(head->val), *cur = newHead, *oriHead = head;
+        unordered_map < Node * , Node * > map;
         map[head] = newHead;
-        while (head->next != nullptr){
+        while (head->next != nullptr) {
             cur->next = new Node(head->next->val);
             cur = cur->next;
             head = head->next;
@@ -37,7 +37,7 @@ public:
             map[head] = cur;
         }
         cur = newHead;
-        while (cur != nullptr){
+        while (cur != nullptr) {
             cur->random = map[oriHead->random];
             cur = cur->next;
             oriHead = oriHead->next;

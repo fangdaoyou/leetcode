@@ -13,18 +13,19 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
+
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
 class Solution {
 public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
-        vector<vector<int>> ans;
-        deque<TreeNode*> deque1;
+    vector <vector<int>> levelOrder(TreeNode *root) {
+        vector <vector<int>> ans;
+        deque < TreeNode * > deque1;
         if (root == nullptr) return ans;
         deque1.push_back(root);
 
-        while (!deque1.empty()){
+        while (!deque1.empty()) {
             int deq_size = deque1.size();
             vector<int> temp;
             for (int i = 0; i < deq_size; ++i) {

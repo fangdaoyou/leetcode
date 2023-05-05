@@ -9,7 +9,7 @@ using namespace std;
 
 class Solution {
 public:
-    bool verifyPostorder(vector<int>& postorder) {
+    bool verifyPostorder(vector<int> &postorder) {
 
     }
 };

@@ -11,8 +11,8 @@ using namespace std;
 class Node {
 public:
     int val;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
 
     Node() {}
 
@@ -22,7 +22,7 @@ public:
         right = NULL;
     }
 
-    Node(int _val, Node* _left, Node* _right) {
+    Node(int _val, Node *_left, Node *_right) {
         val = _val;
         left = _left;
         right = _right;
@@ -32,7 +32,7 @@ public:
 class Solution {
 public:
 
-    Node* treeToDoublyList(Node* root) {
+    Node *treeToDoublyList(Node *root) {
 
     }
 

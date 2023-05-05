@@ -9,10 +9,10 @@ using namespace std;
 
 class Solution {
 public:
-    vector<string> ans;
+    vector <string> ans;
     vector<int> vis;
 
-    void backtrack(const string& s, int i, int n, string& perm) {
+    void backtrack(const string &s, int i, int n, string &perm) {
         if (i == n) {
             ans.push_back(perm);
             return;
@@ -29,7 +29,7 @@ public:
         }
     }
 
-    vector<string> permutation(string s) {
+    vector <string> permutation(string s) {
         int n = s.size();
         vis.resize(n);
         sort(s.begin(), s.end());
