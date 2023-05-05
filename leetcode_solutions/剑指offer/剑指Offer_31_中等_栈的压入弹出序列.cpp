@@ -6,21 +6,20 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
 class Solution {
 public:
-    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
+    bool validateStackSequences(vector<int> &pushed, vector<int> &popped) {
         int n = pushed.size();
-        if(n == 0) return true;
+        if (n == 0) return true;
         stack<int> s;
         int index = 0;
-        for(int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++) {
             s.push(pushed[i]);
-            while(s.top() == popped[index])
-            {
+            while (s.top() == popped[index]) {
                 s.pop();
                 index++;
-                if(s.empty()){
+                if (s.empty()) {
                     break;
                 }
             }

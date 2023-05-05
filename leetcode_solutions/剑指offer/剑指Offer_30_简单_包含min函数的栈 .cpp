@@ -6,10 +6,12 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
 class MinStack {
 public:
 
     stack<int> stk1, stk2;
+
     MinStack() {
 
     }
