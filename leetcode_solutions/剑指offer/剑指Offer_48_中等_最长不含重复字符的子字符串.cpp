@@ -15,11 +15,11 @@ public:
         for (; r < n; ++r) {
             auto it = map.find(s[r]);
             if (it != map.end() && it->second >= l) {
-                l = map[s[r]]+1;
+                l = map[s[r]] + 1;
             }
             map[s[r]] = r;
-            ans = max(ans, r-l+1);
+            ans = max(ans, r - l + 1);
         }
-        return max(ans, r-l);
+        return max(ans, r - l);
     }
 };
